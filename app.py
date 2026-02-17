@@ -6,8 +6,11 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 # Download required NLTK data (only first run)
-nltk.download("punkt")
-nltk.download("stopwords")
+import nltk
+
+nltk.download('punkt')
+nltk.download('punkt_tab')   # ← ADD THIS
+nltk.download('stopwords')
 
 # Load saved model and vectorizer
 model, vectorizer = pickle.load(open("sentiment_model.pkl", "rb"))
